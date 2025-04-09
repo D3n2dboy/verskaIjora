@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250402220413">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250409233434">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -476,10 +476,11 @@
 							<div class="footer__title">Узнавать о новых предложениях</div>
 							<div class="footer__items">
 
-								<form action="" class="footer__form">
+								<form id="telegramForm" class="footer__form" enctype="multipart/form-data">
 									<div class="form__line">
-										<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="Введите вашу почту" class="input">
-										<button class="footer__button"><img src="img/socials/05.svg" alt="05"></button>
+										<input data-error="Ошибка" autocomplete="off" placeholder="Введите вашу почту" type="text" id="email" name="email" class="input" required />
+
+										<button class="button footer__button" type="submit"><img src="img/socials/05.svg" alt="05"></button>
 									</div>
 								</form>
 
@@ -510,7 +511,7 @@
 					информация о
 					застройщике и проектах строительства размещены на сайте единой информационной системы жилищного
 					строительства
-					(ЕИСЖС) наш.дом.рф  Вся информация по ценам, срокам и условиям проведения акций носит справочный характер и
+					(ЕИСЖС) наш.дом.рф Вся информация по ценам, срокам и условиям проведения акций носит справочный характер и
 					не является
 					публичной офертой и действительна на 01.05.2025 г. Точные цены, сроки и условия проведения акций размещены
 					на сайте. 
@@ -528,7 +529,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20250402220413"></script>
+	<script src="js/app.min.js?_v=20250409233434"></script>
 </body>
 
 </html>

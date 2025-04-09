@@ -2932,4 +2932,28 @@
     window.addEventListener("load", (function(e) {
         initSliders();
     }));
+    document.getElementById("telegramForm").addEventListener("submit", (async event => {
+        event.preventDefault();
+        const botToken = "5242721464:AAE8iCERcy26BCKUW9SiOfsb-_qcy6eBJIA";
+        const chatId = "2107408491";
+        const email = document.getElementById("email").value;
+        const text = `Email: ${email} - оформил подписку на новости.`;
+        const formData = new FormData;
+        formData.append("chat_id", chatId);
+        formData.append("text", text);
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                body: formData
+            });
+            if (response.ok) {
+                alert("Сообщение успешно отправлено!");
+                document.getElementById("telegramForm").reset();
+            } else alert("Ошибка отправки сообщения.");
+        } catch (error) {
+            console.error("Ошибка:", error);
+            alert("Ошибка при отправке.");
+        }
+    }));
 })();
